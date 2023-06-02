@@ -10,7 +10,9 @@ while(no_edge<N-1):
     mini=INF
     a=0
     b=0
-    
+ #The outer loop iterates over m, representing the selected vertices.
+# The inner loop iterates over n, representing the unselected vertices.
+# If vertex m is selected (selected_node[m] is True) and vertex n is unselected (not selected_node[n] is True), and there is an edge between m and n (G[m][n] is not 0), it checks if the weight of the edge G[m][n] is smaller than the current minimum weight mini. If so, it updates mini with the new minimum weight and stores the indices a and b of the vertices that form this edge.
     for m in range(N):
         if(selected_node[m]):
             for n in range(N):
